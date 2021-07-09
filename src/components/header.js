@@ -34,8 +34,7 @@ const Header = (title, date, temp) => {
 
 const headerAppender = (selector) => {
   const sel = document.querySelector(selector)  
-  const head = Header('new title', 'new date', 'new temp')
-  sel.appendChild(head)
+  sel.appendChild(Header('Project', 'Today', 'Hot'))
   
   // TASK 2
   // ---------------------

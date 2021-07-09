@@ -43,8 +43,10 @@ const tabsAppender = (selector) => {
   axios.get(`http://localhost:5000/api/topics`)
   .then(res => {
   const sell = document.querySelector(selector)
-  const tabs = Tabs(res.data.topics)
-  sell.appendChild(tabs)
+  sell.appendChild(Tabs(res.data.topics))
+  })
+  .catch(err => {
+    console.log(err)
   })
   // TASK 4
   // ---------------------

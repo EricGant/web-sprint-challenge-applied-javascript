@@ -62,8 +62,10 @@ const cardAppender = (selector) => {
       sel.appendChild(Card(i))})
     res.data.articles.technology.forEach(i => {
       sel.appendChild(Card(i))})
-      
-  })
+    })
+    .catch(err => {
+      console.log(err)
+    })
   
   // TASK 6
   // ---------------------
