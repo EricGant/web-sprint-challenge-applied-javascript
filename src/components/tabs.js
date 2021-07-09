@@ -7,7 +7,7 @@ const Tabs = (topics) => {
     newDiv.textContent = `${i}`
     topicsDiv.appendChild('newDiv')
   })
-  debugger
+  
     
 
   
@@ -27,7 +27,8 @@ const Tabs = (topics) => {
   // </div>
   //
 }
-console.log(Tabs('test', 'two', 'three'))
+
+
 const tabsAppender = (selector) => {
   // TASK 4
   // ---------------------
