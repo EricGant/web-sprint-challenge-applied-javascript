@@ -1,3 +1,5 @@
+import axios from "axios"
+
 let newarr = ['test', 'hate', 'love']
 
 const Tabs = (topics) => {
@@ -9,12 +11,12 @@ const Tabs = (topics) => {
     newDiv.textContent = `${i}`
     topicsDiv.appendChild(newDiv)
   })
-  
-    
+
+
 
   
   return topicsDiv
-  
+
   // TASK 3
   // ---------------------
   // Implement this function which takes an array of strings ("topics") as its only argument.
@@ -30,9 +32,20 @@ const Tabs = (topics) => {
   // </div>
   //
 }
-Tabs(newarr)
+
+// axios.get(`http://localhost:5000/api/topics`)
+//   .then(res => {
+//     tabsAppender(res)
+//     console.log(res.data)
+//   })
 
 const tabsAppender = (selector) => {
+  axios.get(`http://localhost:5000/api/topics`)
+  .then(res => {
+  const sell = document.querySelector(selector)
+  const tabs = Tabs(res.data.topics)
+  sell.appendChild(tabs)
+  })
   // TASK 4
   // ---------------------
   // Implement this function which takes a css selector as its only argument.
