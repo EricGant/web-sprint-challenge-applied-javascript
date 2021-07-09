@@ -1,12 +1,10 @@
 import axios from "axios"
 
-let newarr = ['test', 'hate', 'love']
 
 const Tabs = (topics) => {
   const topicsDiv = document.createElement('div')
-
   topics.forEach(i => {
-    let newDiv = document.createElement('div')
+    let newDiv = document.createElement('div' )
     newDiv.classList.add('tab')
     newDiv.textContent = `${i}`
     topicsDiv.appendChild(newDiv)
