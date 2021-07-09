@@ -1,3 +1,6 @@
+import axios from "axios"
+
+
 const Card = (article) => {
 const divCard = document.createElement('div')
 const divHeadline = document.createElement('div')
@@ -43,8 +46,28 @@ return divCard
   // </div>
   //
 }
+axios.get(`http://localhost:5000/api/articles`)
+.then(res => {
+  console.log(res.data.articles)
+})
 
 const cardAppender = (selector) => {
+   axios.get(`http://localhost:5000/api/articles`)
+  .then(res => {
+    const sel = document.querySelector(selector)
+    res.data.articles.bootstrap.forEach(i => {
+      sel.appendChild(Card(i))})
+    res.data.articles.javascript.forEach(i => {
+      sel.appendChild(Card(i))})
+    res.data.articles.jquery.forEach(i => {
+      sel.appendChild(Card(i))})     
+    res.data.articles.node.forEach(i => {
+      sel.appendChild(Card(i))})
+    res.data.articles.technology.forEach(i => {
+      sel.appendChild(Card(i))})
+      
+  })
+  
   // TASK 6
   // ---------------------
   // Implement this function that takes a css selector as its only argument.
