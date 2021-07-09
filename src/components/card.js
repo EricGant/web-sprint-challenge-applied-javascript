@@ -13,7 +13,7 @@ divImg.classList.add('img-container')
 
 divHeadline.textContent = `${article.headline}`
 spana.textContent = `${article.authorName}`
-img.setAttribute('src', 'authorPhoto')
+img.src = `${article.authorPhoto}`
 
 divCard.appendChild(divHeadline)
 divCard.appendChild(divAuthor)
