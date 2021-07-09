@@ -15,6 +15,9 @@ const Header = (title, date, temp) => {
   div.appendChild(spanDate)
   div.appendChild(h1)
   div.appendChild(spanTemp)
+
+  return div
+
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -30,6 +33,10 @@ const Header = (title, date, temp) => {
 }
 
 const headerAppender = (selector) => {
+  const sel = document.querySelector(selector)  
+  const head = Header('new title', 'new date', 'new temp')
+  sel.appendChild(head)
+  
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
@@ -37,5 +44,5 @@ const headerAppender = (selector) => {
   // It should append the header to the element in the DOM that matches the given selector.
   //
 }
-
+console.log(headerAppender)
 export { Header, headerAppender }
