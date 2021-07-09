@@ -46,10 +46,7 @@ return divCard
   // </div>
   //
 }
-axios.get(`http://localhost:5000/api/articles`)
-.then(res => {
-  console.log(res.data.articles)
-})
+
 
 const cardAppender = (selector) => {
    axios.get(`http://localhost:5000/api/articles`)
