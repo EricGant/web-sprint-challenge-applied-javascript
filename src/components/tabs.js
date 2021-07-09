@@ -1,3 +1,5 @@
+let newarr = ['test', 'hate', 'love']
+
 const Tabs = (topics) => {
   const topicsDiv = document.createElement('div')
 
@@ -5,13 +7,14 @@ const Tabs = (topics) => {
     let newDiv = document.createElement('div')
     newDiv.classList.add('tab')
     newDiv.textContent = `${i}`
-    topicsDiv.appendChild('newDiv')
+    topicsDiv.appendChild(newDiv)
   })
   
     
 
   
   return topicsDiv
+  
   // TASK 3
   // ---------------------
   // Implement this function which takes an array of strings ("topics") as its only argument.
@@ -27,7 +30,7 @@ const Tabs = (topics) => {
   // </div>
   //
 }
-
+Tabs(newarr)
 
 const tabsAppender = (selector) => {
   // TASK 4
